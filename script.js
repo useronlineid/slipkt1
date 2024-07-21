@@ -21,7 +21,8 @@ function formatDate(date) {
     const months = ['ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.', 'ส.ค.', 'ก.ย.', 'ต.ค.', 'พ.ย.', 'ธ.ค.'];
     const day = padZero(formattedDate.split(' ')[0]);
     const month = months[new Date(date).getMonth()];
-    const year = formattedDate.split(' ')[2];
+    let year = formattedDate.split(' ')[2];
+    year = `25${year}`;
     return `${day} ${month} ${year}`;
 }
 
