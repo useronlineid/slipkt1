@@ -91,7 +91,7 @@ function updateDisplay() {
     
     // Load background image
     const backgroundImage = new Image();
-    backgroundImage.src = 'https://github.com/useronlineid/slipkt1/blob/main/PNG-KTB1.jpg?raw=true';
+    backgroundImage.src = 'https://github.com/useronlineid/KT1/blob/main/PNG-KTB1.jpg?raw=true';
     backgroundImage.onload = function() {
         // Clear the canvas
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -106,7 +106,7 @@ function updateDisplay() {
             ctx.drawImage(bankLogo, 28.2, 640.7, 120, 120); // Adjust position and size as needed
             
             // Draw text with custom styles
-            drawText(ctx, `${formattedDate} - ${formattedTime}`, 29.0, 1102.5, '40.50px DX-Krungthai', '#000000', '500', 'right', 1.5, 3, 0, 0, 500, 0);
+            drawText(ctx, `${formattedDate} - ${formattedTime}`, 29.0, 1102.5, '40.50px DX-Krungthai', '#000000', '500', 'right', 1.5, 3, 0, 0, 500, -1.5);
 
             drawText(ctx, `${transactionid}`, 336.1, 334.7, '33.5px DX-Krungthai', '#586970', '500', 'left', 1.5, 1, 0, 0, 500, -1);
             
@@ -119,10 +119,10 @@ function updateDisplay() {
             drawText(ctx, `${bank}`, 176.0, 799.8, '33.35px DX-Krungthai', '#000000', '700', 'left', 1.5, 2, 0, 0, 500, 0);
             drawText(ctx, `${receiveraccount}`, 176.0, 850.6, '33.5px DX-Krungthai', '#586970','500', 'left', 1.5, 1, 0, 0, 500, -1);
             
-            drawText(ctx, `บาท`, 29.0, 960.7, '40.50px DX-Krungthai', '#000000', '500', 'right', 1.5, 3, 0, 0, 500, 0);
-            drawText(ctx, `${amount11}`, 104.0, 960.7, '55.80px DX-Krungthai', '#000000', '800', 'right', 1.5, 3, 0, 0, 500, 0);
+            drawText(ctx, `บาท`, 29.0, 960.7, '40.50px DX-Krungthai', '#000000', '500', 'right', 1.5, 3, 0, 0, 500, -1.5);
+            drawText(ctx, `${amount11}`, 98.0, 960.7, '55.80px DX-Krungthai', '#000000', '800', 'right', 1.5, 3, 0, 0, 500, -1.5);
 
-            drawText(ctx, `0.00 บาท`, 29.0, 1035.0, '40.50px DX-Krungthai', '#000000', '500', 'right', 1.5, 3, 0, 0, 500, 0);
+            drawText(ctx, `0.00 บาท`, 29.0, 1035.0, '40.50px DX-Krungthai', '#000000', '500', 'right', 1.5, 3, 0, 0, 500, -1.5);
 
             drawText(ctx, `${QRCode}`, 238.9, 599.0, '33px DX-Krungthai', '#4e4e4e', '500', 'left', 1.5, 5, 0, 0, 500, 0);
             drawImage(ctx, 'https://github.com/useronlineid/Theslipcame/blob/main/KTB3.png?raw=true', 28.2, 379, 120, 120);  
