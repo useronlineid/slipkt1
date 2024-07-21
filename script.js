@@ -108,7 +108,7 @@ function updateDisplay() {
             ctx.drawImage(bankLogo, 28.2, 640.7, 120, 120); // Adjust position and size as needed
             
             // Draw text with custom styles
-            drawText(ctx, `${formattedDate} - ${formattedTime}`, 29.0, 1102.5, '40.50px DX-Krungthai', '#000000', '500', 'right', 1.5, 3, 0, 0, 500, -1.5);
+            drawText(ctx, `${formattedDate} - ${formattedTime}`, 29.0, 1102.5, '40.50px DX-Krungthai', '#000000', '500', 'right', 1.5, 3, 0, 0, 800, -1.5);
 
             drawText(ctx, `${transactionid}`, 336.1, 334.7, '33.5px DX-Krungthai', '#586970', '500', 'left', 1.5, 1, 0, 0, 500, -1);
             
@@ -117,7 +117,7 @@ function updateDisplay() {
             drawText(ctx, `กรุงไทย`, 176.0, 540.6, '33.35px DX-Krungthai', '#000000', '700', 'left', 1.5, 2, 0, 0, 500, 0);
             drawText(ctx, `${senderaccount}`, 176.0, 591.1, '33.5px DX-Krungthai', '#586970', '500', 'left', 1.5, 1, 0, 0, 500, -1);
             
-            drawText(ctx, `${receivername}`, 176.0, 746.5, '44.3px DX-Krungthai', '#000000', '600', 'left', 1.5, 3, 0, 0, 500, 0);
+            drawText(ctx, `${receivername}`, 176.0, 746.5, '44.3px DX-Krungthai', '#000000', '600', 'left', 1.5, 3, 0, 0, 800, 0);
             drawText(ctx, `${bank}`, 176.0, 799.8, '33.35px DX-Krungthai', '#000000', '700', 'left', 1.5, 2, 0, 0, 500, 0);
             drawText(ctx, `${receiveraccount}`, 176.0, 850.6, '33.5px DX-Krungthai', '#586970','500', 'left', 1.5, 1, 0, 0, 500, -1);
             
