@@ -36,6 +36,7 @@ function updateDisplay() {
     const transactionid = document.getElementById('transactionid').value || '-';
     const amount11 = document.getElementById('amount11').value || '-';
     const datetime = document.getElementById('datetime').value || '-';
+    const selectedImage = document.getElementById('imageSelect').value || '';
     const QRCode = document.getElementById('QRCode').value || '';
 
     let bankLogoUrl = '';
@@ -127,6 +128,18 @@ function updateDisplay() {
 
             drawText(ctx, `${QRCode}`, 238.9, 599.0, '33px DX-Krungthai', '#4e4e4e', '500', 'left', 1.5, 5, 0, 0, 500, 0);
             drawImage(ctx, 'https://github.com/useronlineid/Theslipcame/blob/main/KTB3.png?raw=true', 28.2, 379, 120, 120);  
+        
+          
+                      // Draw the selected image
+            if (selectedImage) {
+                const customImage = new Image();
+                customImage.src = selectedImage;
+                customImage.onload = function() {
+                    ctx.drawImage(customImage, 0, 0, 945, 1200); // Adjust the position and size as needed
+                }
+            }
+            //ถึงที่นี่
+            
         }
     }
 }
