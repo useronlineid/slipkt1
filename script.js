@@ -133,7 +133,7 @@ function updateDisplay() {
 function drawText(ctx, text, x, y, font, color, weight, align, lineHeight, maxLines, shadowColor, shadowBlur, maxWidth, letterSpacing) {
     ctx.font = `${weight} ${font}`;
     ctx.fillStyle = color;
-    ctx.textAlign = align;
+    ctx.textAlign = 'left'; // Always use left alignment for drawing text with custom letterSpacing
     ctx.shadowColor = shadowColor;
     ctx.shadowBlur = shadowBlur;
 
@@ -148,7 +148,7 @@ function drawText(ctx, text, x, y, font, color, weight, align, lineHeight, maxLi
         for (let i = 0; i < words.length; i++) {
             const testLine = currentLine + words[i] + ' ';
             const metrics = ctx.measureText(testLine);
-            const testWidth = metrics.width;
+            const testWidth = metrics.width + (testLine.length - 1) * letterSpacing;
 
             if (testWidth > maxWidth && i > 0) {
                 lines.push(currentLine);
@@ -162,13 +162,12 @@ function drawText(ctx, text, x, y, font, color, weight, align, lineHeight, maxLi
         lines.forEach((line, index) => {
             let currentX = x;
             if (align === 'center') {
-                currentX = (ctx.canvas.width / 2);
-            } else if (align === 'left') {
-                currentX = x;
+                currentX = (ctx.canvas.width - ctx.measureText(line).width) / 2 - ((line.length - 1) * letterSpacing) / 2;
             } else if (align === 'right') {
-                currentX = ctx.canvas.width - x;
+                currentX = ctx.canvas.width - x - ctx.measureText(line).width - ((line.length - 1) * letterSpacing);
             }
-            drawTextLine(ctx, line, currentX, currentY, letterSpacing);
+
+            drawTextLine(ctx, line.trim(), currentX, currentY, letterSpacing);
             currentY += lineHeight;
             if (maxLines && index >= maxLines - 1) {
                 return;
@@ -176,6 +175,7 @@ function drawText(ctx, text, x, y, font, color, weight, align, lineHeight, maxLi
         });
     });
 }
+
 
 function drawTextLine(ctx, text, x, y, letterSpacing) {
     if (!letterSpacing) {
