@@ -201,7 +201,7 @@ function drawTextLine(ctx, text, x, y, letterSpacing) {
 
         if (isUpperVowel) {
             yOffset = 1;
-            xOffset = -4;
+            xOffset = -1;
         }
 
         if (isToneMark) {
@@ -210,7 +210,7 @@ function drawTextLine(ctx, text, x, y, letterSpacing) {
                 xOffset = -5; // เลื่อนในแนวนอน ซ้าย 5 หน่วย
             } else {
                 yOffset = -0; // วรรณยุกต์ไม่มีสระ เลื่อนขึ้น 8 หน่วย
-                xOffset = -9; // เลื่อนในแนวนอน ซ้าย 5 หน่วย
+                xOffset = -5; // เลื่อนในแนวนอน ซ้าย 5 หน่วย
             }
         }
 
