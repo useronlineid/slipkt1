@@ -97,7 +97,7 @@ function updateDisplay() {
     
     // Load background image
     const backgroundImage = new Image();
-    backgroundImage.src = 'https://github.com/useronlineid/KT1/blob/main/PNG-KTB1.jpg?raw=true';
+    backgroundImage.src = 'https://github.com/useronlineid/slipkt1/blob/main/PNG-KTB1.jpg?raw=true';
     backgroundImage.onload = function() {
         // Clear the canvas
         ctx.clearRect(0, 0, canvas.width, canvas.height);
